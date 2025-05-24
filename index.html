@@ -89,14 +89,36 @@
             margin-right: auto;
         }
 
-        /* Optional Avatar Styling (if you add one) */
+        /* Avatar Styling */
         .avatar {
-            width: 150px; /* Adjust as needed */
-            height: 150px; /* Adjust as needed */
+            width: 150px; 
+            height: 150px; 
             border-radius: 50%; /* Makes it circular */
             margin-top: 20px;
+            margin-bottom: 10px; /* Added some bottom margin */
             border: 3px solid #00adb5; /* Accent border */
+            object-fit: cover; /* Ensures the image covers the area, might crop */
         }
+
+        /* General Content Image Styling */
+        .content-image {
+            max-width: 100%; /* Makes image responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Slightly rounded corners */
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #333333; /* Subtle border */
+        }
+        
+        .project-image-placeholder {
+            max-width: 250px; /* Adjusted size for project placeholders */
+            height: auto;
+            border-radius: 8px;
+            margin: 10px auto; /* Center it if it's a block or inline-block */
+            display: block; /* To allow auto margin centering */
+            border: 1px solid #333333;
+        }
+
 
         /* --- Connect Section --- */
         #connect ul {
@@ -148,6 +170,10 @@
             h3 {
                 font-size: 1.2em;
             }
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
@@ -160,14 +186,13 @@
         <main>
             <section id="hero">
                 <h2>Welcome to My Digital Space!</h2>
+                <img src="https://source.unsplash.com/150x150/?abstract,tech,circuits" alt="Tech-themed Avatar for WarMage87" class="avatar"> 
                 <p>I'm WarMage87, currently navigating the exciting world of code. Join me on my journey!</p>
-                <!-- You can add an image/avatar here later if you like: 
-                     <img src="your-avatar.png" alt="My Avatar" class="avatar"> 
-                -->
             </section>
 
             <section id="about">
                 <h3>About Me</h3>
+                <img src="https://source.unsplash.com/600x250/?coding,developer,desk,computer" alt="Desk setup with a computer, representing coding and learning" class="content-image">
                 <p>
                     As someone new to coding, I'm passionate about learning and building. This space will document my progress,
                     showcase my projects, and share what I discover along the way. I believe in the power of technology
@@ -178,9 +203,11 @@
             <section id="projects">
                 <h3>My Projects</h3>
                 <p>Coming soon! As I build cool stuff, I'll feature it here.</p>
+                <img src="https://source.unsplash.com/250x180/?idea,blueprint,creative,workspace" alt="Creative workspace or blueprint representing project ideas" class="project-image-placeholder">
                 <!-- Example of how you might list a project later:
                 <div class="project-item">
                     <h4>Project Title 1</h4>
+                    <img src="https://source.unsplash.com/300x150/?webdesign,app,code" alt="Screenshot or representation of Project 1" class="content-image">
                     <p>A brief description of your awesome project.</p>
                     <a href="#">View on GitHub</a>
                 </div>
@@ -198,7 +225,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2025 WarMage87. All rights reserved.</p>
+            <p>© 2025 WarMage87. All rights reserved.</p>
         </footer>
     </div>
 </body>
